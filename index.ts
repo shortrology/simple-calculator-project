@@ -4,30 +4,37 @@
 
 let answers = await inquirer.prompt([
   {
-    message: "Enter first number",
+    message: "Enter your first number",
     type: "number",
     name: "firstNumber",
   },
-  {message:"Enter second number",type:"number", name:"secondNumber" },
 
-  {message:"select one operator to perform operations",
+  {
+    message:"Enter  your second number",
+  type:"number",
+   name:"secondNumber"
+ },
+
+  {
+    message:"select one operator to perform operations",
   type:"list",
   name:"operator",
-  choices:["Addition","Subtractions" , "Multiplication","Division"]},
+  choices:["Addition","Subtractions" , "Multiplication","Division"]
+},
 
 ]);
 
 // condtional statments If-Else
 
 if (answers.operator === "Addition")
-    {console.log(answers.firstNumber + answers. secondNumber);
+    {
+        console.log(answers.firstNumber + answers. secondNumber);
     }  
     else if (answers.operator === "Subtractions") 
         {
             console.log(answers.firstNumber - answers.secondNumber)
         } 
-        else if  (answers.operator
-             === "multiplication") 
+        else if  (answers.operator === "multiplication") 
             {
                 console.log(answers.firstNumber * answers.secondNumber);
                 
